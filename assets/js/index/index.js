@@ -1,6 +1,6 @@
 const index = function() {
+    window.addEventListener('load', utils.resizeProductCard);
     window.addEventListener('resize', utils.resizeProductCard);
-
 
 
     $('.slider_custom').slick({
@@ -12,8 +12,8 @@ const index = function() {
         dots: true,
         fade: false,
         adaptiveHeight: true,
-        autoplay: false,
-        autoplaySpeed: 1000,
+        autoplay: true,
+        autoplaySpeed: 3000,
         infinite: true,
         useTransform: true,
         speed: 400,
@@ -30,16 +30,15 @@ const index = function() {
             }
           ]
     });
-
-
     
+
     vinhos.forEach((product, i) => {
         let card1 = createProductCard(product);
         let card2 = createProductCard(product);
         
         document.querySelector('#destaques').append(card1);
         document.querySelector('#mais_vendidos').append(card2);
-    })
+    });
 
 
     document.querySelectorAll('.product_card_btn_like').forEach((like) => {
@@ -54,15 +53,11 @@ const index = function() {
                 icon.src = "assets/img/icons/like-outline.svg";
             }
             
+            el.classList.toggle('like_animate');
             icon.classList.toggle('liked')
         });
     });
-
-
-    setTimeout(() => {
-        utils.resizeProductCard();
-    }, 1000);
-
+    
 
     function createProductCard(product) {
         let {id, name, year, photoURL, amount, amountPartner, amountNoPartner, nationality: {country, flagURL}, attributes} = product;

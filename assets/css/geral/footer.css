@@ -23,7 +23,6 @@
     transform: translate(-50%, -50%);
     width: 100%;
     
-    font-family: 'Poppins', sans-serif;
     font-style: italic;
     color: #fff;
     text-align: center;
@@ -34,6 +33,10 @@
 #footer_podcast:hover .footer_podcast_player > img {
     /* transform: scale(1.1); */
     transform: rotate(1turn) scale(1.1);
+}
+.footer_podcast_player > h3 {
+    font-family: Neo Sans W1G;
+    font-weight: 800;
 }
 
 
@@ -53,9 +56,13 @@
         padding: 6rem 0;
     }
     .footer_podcast_player > h3 {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 @media (min-width: 768px) {}
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .footer_podcast_player > h3 {
+        font-size: 20px;
+    }
+}
 @media (min-width: 1200px) {}

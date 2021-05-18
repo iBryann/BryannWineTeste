@@ -35,6 +35,21 @@
     right: 0;
     top: 0;
 }
+.like_animate {
+    animation: anim_like .4s;
+}
+@keyframes anim_like {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 .card_header_attrib {
     position: absolute;
     left: 0;

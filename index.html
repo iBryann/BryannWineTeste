@@ -13,7 +13,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/index/index.css">
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700;900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
 
@@ -103,11 +103,106 @@
         </div>
 
 
-        <div id="section_banner" class="container mb-5">
+        <div id="section_banner" class="container">
             <a href="https://www.wine.com.br/">
                 <img class="d-none d-sm-inline img-fluid w-100" src="assets/img/arts/banner-horizontal.png" alt="Promoção Ropiteau Frères por R$ 66,33">
                 <img class="d-sm-none img-fluid w-100" src="assets/img/arts/banner-horizontal-mobile.png" alt="Promoção Ropiteau Frères por R$ 66,33">
             </a>
+        </div>
+
+
+        <style>
+            .card_sparkling {
+                position: relative;
+                display: flex;
+                height: 500px;
+                margin: 6rem 0;
+            }
+            .card_sparkling_photo {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+
+            }
+            .card_sparkling_bg, .card_sparkling_info {
+                height: 100%;
+                width: 50%;
+            }
+            .card_sparkling_bg {
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .card_sparkling_info {
+                display: flex;
+                align-items: center;
+                background: #EEEEEE;
+                padding: 0 8rem;
+            }
+            .sparkling_info {
+                width: 80%;
+                color: #333333;
+                font-weight: 500;
+                line-height: 34px;
+                letter-spacing: 0.06em;
+            }
+            .sparkling_info h2 {
+                font-family: Neo Sans W1G;
+                font-size: 33.5px;
+            }
+            .sparkling_info h3 {
+                font-size: 25.5px;
+            }
+            .sparkling_info_amount > s {
+                font-weight: 500;
+                font-size: 18.5px;
+                line-height: 10px;
+            }
+            .sparkling_info_amount > strong {
+                font-weight: 900;
+                font-size: 34.5px;
+                line-height: 63px;
+            }
+            .sparkling_info_bt {
+                width: 220px;
+                font-size: 14px;
+                line-height: 16px;
+                font-weight: bold;
+                color: #FFFFFF;
+                background: #7EBC43;
+                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+                border-radius: 4px;
+                padding: .7rem;
+            }
+        </style>
+
+
+        <div class="card_sparkling">
+            <img class="card_sparkling_photo" src="assets/img/backgrounds/espumante.png" alt="Espumante">
+            
+            <div class="card_sparkling_bg" style="background: url(assets/img/backgrounds/pizza.jpg)"></div>
+            
+            <div class="card_sparkling_info">
+                <div class="sparkling_info border">
+                    <h2 class="mb-4">Harmonizações Wine</h2>
+
+                    <h3 class="sparkling_info_title pt-3 mb-4">
+                        Espumante Toro Loco D.O. Cava Brut
+                    </h3>
+
+                    <div class="sparkling_info_amount d-flex flex-column pt-1 mb-4">
+                        <s>R$ 330,00</s>
+                        <strong>R$ 280,00</strong>
+                    </div>
+
+                    <div>
+                        <button class="sparkling_info_bt btn" type="button">
+                            Eu quero
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -214,7 +309,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script type="text/javascript" src="assets/data/vinhos.js"></script>
+        <script type="text/javascript" src="assets/data/data.js"></script>
         <script type="text/javascript" src="assets/js/utils/utils.js"></script>
         <script type="text/javascript" src="assets/js/index/index.js"></script>
     </body>

@@ -70,3 +70,30 @@ const vinhos = [
 		"attributes": ["Tinto", "Seco"]
 	}
 ]
+
+const espumantes = [
+	{
+		"id": 15861,
+		"name": "Espumante Cava Maset Del Lleó Brut",
+		"amount": 68,
+		"discount": 80,
+		"photoURL": "https://www.wine.com.br/cdn-cgi/image/f=auto,h=515,q=99/assets-images/produtos/15861-01.png",
+        "backgroundURL": "assets/img/backgrounds/pizza.jpg",
+	},
+	{
+		"id": 4187,
+		"name": "Champagne Krug Rosé Extra Brut.",
+		"amount": 3461.90,
+		"discount": 5499.90,
+		"photoURL": "https://www.wine.com.br/cdn-cgi/image/f=auto,h=515,q=99/assets-images/produtos/4187-01.png",
+        "backgroundURL": "assets/img/backgrounds/bistro.jpg",
+	},
+	{
+		"id": 4199,
+		"name": "Champagne Veuve Clicquot Demi-Sec",
+		"amount": 647.90,
+		"discount": 939.90,
+		"photoURL": "https://www.wine.com.br/cdn-cgi/image/f=auto,h=515,q=99/assets-images/produtos/4199-01.png",
+        "backgroundURL": "assets/img/backgrounds/catchurinho.jpg",
+	}
+]
