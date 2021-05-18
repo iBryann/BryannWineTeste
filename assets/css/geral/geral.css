@@ -1,0 +1,14 @@
+:root {
+    --transition-time: .2s;
+    --wine-color: #C81A78;
+}
+
+body {
+    background-color: #F5F5F5;
+    font-family: Lato;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}

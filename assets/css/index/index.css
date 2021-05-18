@@ -1,0 +1,125 @@
+/* CARD LIST */
+.scroll {
+    overflow-x: auto;
+}
+
+#card_list .custom_bt_tab {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #888888;
+    padding: 10px 0;
+    margin-right: 1rem;
+}
+#card_list .custom_bt_tab.active {
+    color: var(--wine-color);
+    border-bottom: 1px solid var(--wine-color);
+}
+
+.product_card {
+    min-width: 250px;
+}
+.product_card_body {
+    padding: 1rem;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.product_card_header {
+    position: relative;
+    margin-bottom: 1rem;
+}
+.product_card_btn_like {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.card_header_attrib {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.card_header_attrib li:nth-child(1) span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--wine-color);
+    transition: var(--transition-time);
+}
+.card_header_attrib li:nth-child(2) img {
+    width: 16px;
+    transition: var(--transition-time);
+}
+.card_header_attrib li:nth-child(1) span:hover,
+.card_header_attrib li:nth-child(2) img:hover {
+    transform: scale(1.2);
+}
+
+.product_card_title h3 {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #111111;
+}
+
+.product_card_amount {
+    text-align: center;
+    font-size: 10px;
+    line-height: 16px;
+}
+.card_amount_original {
+    font-weight: 600;
+    font-size: 12px;
+    color: #555555;
+}
+.card_amount_descount {
+    background: #EE3E80;
+    border-radius: 2px;
+    color: #FFFFFF;
+    padding: 2px 5px;
+}
+.card_amount_partner_label {
+    font-weight: 300;
+    line-height: 10px;
+    text-align: right;
+    text-transform: uppercase;
+    color: #555555;
+    margin-right: 10px;
+}
+.card_amount_partner {
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--wine-color);
+    
+}
+.card_amount_partner > span {
+    position: relative;
+    font-size: 12px;
+}
+.card_amount_partner > span:nth-child(2) {
+    left: -4px;
+}
+.card_amount_no_partner {
+    text-transform: uppercase;
+    color: #888888;
+}
+
+.product_card_btn_add {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffff;
+    background-color: #7EBC43;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: .6rem 0;
+    transition: var(--transition-time);
+}
+.product_card_btn_add:hover {
+    filter: brightness(1.05);
+    color: #fff;
+}
