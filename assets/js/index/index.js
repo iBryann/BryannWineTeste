@@ -1,22 +1,36 @@
 const index = function() {
     window.addEventListener('resize', utils.resizeProductCard);
 
+
+
     $('.slider_custom').slick({
         prevArrow: $('#prev'),
         nextArrow: $('#next'),
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: true,
-        dots: false,
+        arrows: false,
+        dots: true,
         fade: false,
         adaptiveHeight: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 1000,
         infinite: true,
         useTransform: true,
         speed: 400,
         cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+        mobileFirst: true,
+
+        responsive: [
+            {
+              breakpoint: 575,
+              settings: {
+                arrows: true,
+                dots: false,
+              }
+            }
+          ]
     });
+
 
     
     vinhos.forEach((product, i) => {
