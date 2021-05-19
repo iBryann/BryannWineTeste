@@ -13,28 +13,55 @@ const index = function() {
         fade: false,
         adaptiveHeight: true,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 1000,
         infinite: true,
         useTransform: true,
-        speed: 400,
+        speed: 600,
         cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
         mobileFirst: true,
-
         responsive: [
             {
-              breakpoint: 575,
-              settings: {
-                arrows: true,
-                dots: false,
-              }
+                breakpoint: 575,
+                settings: {
+                    arrows: true,
+                    dots: false,
+                }
             }
-          ]
+        ]
+    });
+
+
+    $('#slider_sparkling').slick({
+        prevArrow: $('#prev2'),
+        nextArrow: $('#next2'),
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        fade: false,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        infinite: true,
+        useTransform: true,
+        speed: 600,
+        cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
+        mobileFirst: true,
+        responsive: [
+            {
+                breakpoint: 575,
+                settings: {
+                    arrows: true,
+                    dots: false,
+                }
+            }
+        ]
     });
     
 
-    vinhos.forEach((product, i) => {
-        let card1 = createProductCard(product);
-        let card2 = createProductCard(product);
+    vinhos.forEach((wine, i) => {
+        let card1 = createWineCard(wine);
+        let card2 = createWineCard(wine);
         
         document.querySelector('#destaques').append(card1);
         document.querySelector('#mais_vendidos').append(card2);
@@ -57,9 +84,52 @@ const index = function() {
             icon.classList.toggle('liked')
         });
     });
+
+
+    function createWineCard(product) {
+        let {id, name, year, photoURL, amount, amountPartner, amountNoPartner, nationality: {country, flagURL}, attributes} = product;
+        let [partinerInt, partinerFract] = String(amountPartner.toFixed(2)).split('.');
+
+        let container = document.createElement('div');
+        container.classList.add('product_card', 'mt-2', 'col');
+        container.innerHTML = `
+            <div class="">
+                <div class="card_sparkling">
+                    <div class="card_sparkling_bg position-relative" style="background-image: url(assets/img/backgrounds/pizza.jpg)">
+                        <img class="card_sparkling_photo d-sm-none" src="assets/img/backgrounds/espumante.png" alt="Espumante">
+                    </div>
+                    
+                    <div class="card_sparkling_info position-relative">
+                        <img class="card_sparkling_photo d-none d-sm-inline" src="assets/img/backgrounds/espumante.png" alt="Espumante">
+
+                        <div class="sparkling_info">
+                            <h2 class="mb-4">Harmonizações Wine</h2>
+
+                            <h3 class="sparkling_info_title pt-3 mb-4">
+                                Espumante Toro Loco D.O. Cava Brut
+                            </h3>
+
+                            <div class="sparkling_info_amount d-flex flex-column pt-1 mb-4">
+                                <s>R$ 330,00</s>
+                                <strong>R$ 280,00</strong>
+                            </div>
+
+                            <div>
+                                <button class="sparkling_info_bt btn" type="button">
+                                    Eu quero
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        return container;
+    }
     
 
-    function createProductCard(product) {
+    function createWineCard(product) {
         let {id, name, year, photoURL, amount, amountPartner, amountNoPartner, nationality: {country, flagURL}, attributes} = product;
         let [partinerInt, partinerFract] = String(amountPartner.toFixed(2)).split('.');
 
@@ -125,7 +195,7 @@ const index = function() {
             <button class="btn w-100 product_card_btn_add" type="button" data-id=${id}>
                 Adicionar
             </button>
-        `
+        `;
 
         return container;
     }

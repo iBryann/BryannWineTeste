@@ -60,7 +60,7 @@
                     </div>
                 </div>
 
-                <div id="slider_arrows_container">
+                <div class="slider_arrows">
                     <div class="container d-flex justify-content-between">
                         <div id="prev">
                             <img src="assets/img/arrow-left.svg">
@@ -73,8 +73,6 @@
                 </div>
             </div>
         </header>
-
-
 
 
         <div id="card_list" class="container mb-5">
@@ -111,127 +109,7 @@
         </div>
 
 
-        <style>
-            .card_sparkling_photo {
-                z-index: 1;
-                position: absolute;
-            }
-
-            .card_sparkling {
-                position: relative;
-                display: flex;
-                margin: 6rem 0;
-            }
-            .card_sparkling_bg {
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
-            .card_sparkling_info {
-                display: flex;
-                align-items: center;
-                background: #EEEEEE;
-            }
-
-            .sparkling_info {
-                color: #333333;
-                font-weight: 500;
-                line-height: 34px;
-                letter-spacing: 0.06em;
-            }
-            .sparkling_info h2 {
-                font-family: Neo Sans W1G;
-                font-size: 33.5px;
-            }
-            .sparkling_info h3 {
-                font-size: 25.5px;
-            }
-            .sparkling_info_amount > s {
-                font-weight: 500;
-                font-size: 18.5px;
-                line-height: 10px;
-            }
-            .sparkling_info_amount > strong {
-                font-weight: 900;
-                font-size: 34.5px;
-                line-height: 63px;
-            }
-            .sparkling_info_bt {
-                width: 220px;
-                font-size: 14px;
-                line-height: 16px;
-                font-weight: bold;
-                color: #FFFFFF;
-                background: #7EBC43;
-                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-                border-radius: 4px;
-                padding: .7rem;
-            }
-            .sparkling_info_bt:hover {
-                color: #FFFFFF;
-                filter: brightness(1.1);
-            }
-
-
-            @media (min-width: 0px) {
-                .card_sparkling {
-                    flex-direction: column;
-                    height: auto;
-                }
-                .card_sparkling_bg {
-                    height: 320px;
-                    width: 100%;
-                }
-                .card_sparkling_info {
-                    height: auto;
-                    width: 100%;
-                    min-width: auto;
-                    padding: 4rem 2rem 5rem;
-                }
-                .sparkling_info {
-                    width: 100%;
-                    text-align: center;
-                }
-
-                .card_sparkling_photo {
-                    height: 380px;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                }
-            }
-            @media (min-width: 576px) {
-                .card_sparkling {
-                    flex-direction: row;
-                    height: 500px;
-                }
-                .card_sparkling_bg, .card_sparkling_info {
-                    height: 100%;
-                    width: 50%;
-                }
-                .card_sparkling_info {
-                    min-width: 500px;
-                    padding: 0 8rem;
-                }
-                .sparkling_info {
-                    text-align: left;
-                }
-                .card_sparkling_photo {
-                    height: auto;
-                    left: 0%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                }
-            }
-            @media (min-width: 768px) {
-                .sparkling_info {
-                    width: 80%;
-                }
-            }
-        </style>
-
-
-        <div class="card_sparkling">
+        <div class="card_sparkling d-none">
             <div class="card_sparkling_bg position-relative" style="background-image: url(assets/img/backgrounds/pizza.jpg)">
                 <img class="card_sparkling_photo d-sm-none" src="assets/img/backgrounds/espumante.png" alt="Espumante">
             </div>
@@ -262,6 +140,88 @@
 
 
 
+
+        <div class="container_sparkling">
+
+            <div id="slider_sparkling">
+
+                <div class="">
+                    <div class="card_sparkling">
+                        <div class="card_sparkling_bg position-relative" style="background-image: url(assets/img/backgrounds/pizza.jpg)">
+                            <img class="card_sparkling_photo d-sm-none" src="assets/img/backgrounds/espumante.png" alt="Espumante">
+                        </div>
+                        
+                        <div class="card_sparkling_info position-relative">
+                            <img class="card_sparkling_photo d-none d-sm-inline" src="assets/img/backgrounds/espumante.png" alt="Espumante">
+            
+                            <div class="sparkling_info">
+                                <h2 class="mb-4">Harmonizações Wine</h2>
+            
+                                <h3 class="sparkling_info_title pt-3 mb-4">
+                                    Espumante Toro Loco D.O. Cava Brut
+                                </h3>
+            
+                                <div class="sparkling_info_amount d-flex flex-column pt-1 mb-4">
+                                    <s>R$ 330,00</s>
+                                    <strong>R$ 280,00</strong>
+                                </div>
+            
+                                <div>
+                                    <button class="sparkling_info_bt btn" type="button">
+                                        Eu quero
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="">
+                    <div class="card_sparkling">
+                        <div class="card_sparkling_bg position-relative" style="background-image: url(assets/img/backgrounds/pizza.jpg)">
+                            <img class="card_sparkling_photo d-sm-none" src="assets/img/backgrounds/espumante.png" alt="Espumante">
+                        </div>
+                        
+                        <div class="card_sparkling_info position-relative">
+                            <img class="card_sparkling_photo d-none d-sm-inline" src="assets/img/backgrounds/espumante.png" alt="Espumante">
+            
+                            <div class="sparkling_info">
+                                <h2 class="mb-4">Harmonizações Wine</h2>
+            
+                                <h3 class="sparkling_info_title pt-3 mb-4">
+                                    Espumante Toro Loco D.O. Cava Brut
+                                </h3>
+            
+                                <div class="sparkling_info_amount d-flex flex-column pt-1 mb-4">
+                                    <s>R$ 330,00</s>
+                                    <strong>R$ 280,00</strong>
+                                </div>
+            
+                                <div>
+                                    <button class="sparkling_info_bt btn" type="button">
+                                        Eu quero
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="slider_arrows">
+                <div class="container d-flex justify-content-between">
+                    <div id="prev2">
+                        <img src="assets/img/arrow-left.svg">
+                    </div>
+
+                    <div id="next2">
+                        <img src="assets/img/arrow-right.svg">
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
         
 

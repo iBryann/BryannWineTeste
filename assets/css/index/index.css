@@ -138,3 +138,138 @@
     filter: brightness(1.05);
     color: #fff;
 }
+
+
+/* sparkling section */
+.card_sparkling_photo {
+    z-index: 1;
+    position: absolute;
+}
+
+.card_sparkling {
+    position: relative;
+    display: flex;
+    margin: 6rem 0;
+}
+.card_sparkling_bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card_sparkling_info {
+    display: flex;
+    align-items: center;
+    background: #EEEEEE;
+}
+
+.sparkling_info {
+    color: #333333;
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: 0.06em;
+}
+.sparkling_info h2 {
+    font-family: Neo Sans W1G;
+    font-size: 33.5px;
+}
+.sparkling_info h3 {
+    font-size: 25.5px;
+}
+.sparkling_info_amount > s {
+    font-weight: 500;
+    font-size: 18.5px;
+    line-height: 10px;
+}
+.sparkling_info_amount > strong {
+    font-weight: 900;
+    font-size: 34.5px;
+    line-height: 63px;
+}
+.sparkling_info_bt {
+    width: 220px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: #7EBC43;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: .7rem;
+}
+.sparkling_info_bt:hover {
+    color: #FFFFFF;
+    filter: brightness(1.1);
+}
+
+
+/* Slick Slider */
+.container_sparkling {
+    position: relative;
+    /* border: 2px solid red; */
+}
+#slider_sparkling > .slick-dots {
+    bottom: 11%;
+}
+#slider_sparkling .slick-dots li {
+    background: #888888;
+}
+#slider_sparkling .slick-dots li.slick-active {
+    background: #C81A78;
+}
+
+
+@media (min-width: 0px) {
+    .card_sparkling {
+        flex-direction: column;
+        height: auto;
+    }
+    .card_sparkling_bg {
+        height: 320px;
+        width: 100%;
+    }
+    .card_sparkling_info {
+        height: auto;
+        width: 100%;
+        min-width: auto;
+        padding: 4rem 2rem 5rem;
+    }
+    .sparkling_info {
+        width: 100%;
+        text-align: center;
+    }
+
+    .card_sparkling_photo {
+        height: 380px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media (min-width: 576px) {
+    .card_sparkling {
+        flex-direction: row;
+        height: 500px;
+    }
+    .card_sparkling_bg, .card_sparkling_info {
+        height: 100%;
+        width: 50%;
+    }
+    .card_sparkling_info {
+        min-width: 500px;
+        padding: 0 8rem;
+    }
+    .sparkling_info {
+        text-align: left;
+    }
+    .card_sparkling_photo {
+        height: auto;
+        left: 0%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media (min-width: 768px) {
+    .sparkling_info {
+        width: 80%;
+    }
+}
