@@ -2,6 +2,21 @@ const index = function() {
     window.addEventListener('load', utils.resizeProductCard);
     window.addEventListener('resize', utils.resizeProductCard);
 
+    
+    vinhos.forEach((wine, i) => {
+        let card1 = createWineCard(wine);
+        let card2 = createWineCard(wine);
+
+        document.querySelector('#destaques').append(card1);
+        document.querySelector('#mais_vendidos').append(card2);
+    });
+
+
+    espumantes.forEach((sparkling, i) => {
+        let card = createSparklingCard(sparkling);
+        document.querySelector('#slider_sparkling').append(card);
+    });
+
 
     $('.slider_custom').slick({
         prevArrow: $('#prev'),
@@ -13,10 +28,10 @@ const index = function() {
         fade: false,
         adaptiveHeight: true,
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 3000,
         infinite: true,
         useTransform: true,
-        speed: 600,
+        speed: 1000,
         cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
         mobileFirst: true,
         responsive: [
@@ -41,10 +56,10 @@ const index = function() {
         fade: false,
         adaptiveHeight: true,
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 3000,
         infinite: true,
         useTransform: true,
-        speed: 600,
+        speed: 1000,
         cssEase: 'cubic-bezier(0.77, 0, 0.18, 1)',
         mobileFirst: true,
         responsive: [
@@ -58,15 +73,6 @@ const index = function() {
         ]
     });
     
-
-    vinhos.forEach((wine, i) => {
-        let card1 = createWineCard(wine);
-        let card2 = createWineCard(wine);
-        
-        document.querySelector('#destaques').append(card1);
-        document.querySelector('#mais_vendidos').append(card2);
-    });
-
 
     document.querySelectorAll('.product_card_btn_like').forEach((like) => {
         like.addEventListener('click', e => {
@@ -86,39 +92,35 @@ const index = function() {
     });
 
 
-    function createWineCard(product) {
-        let {id, name, year, photoURL, amount, amountPartner, amountNoPartner, nationality: {country, flagURL}, attributes} = product;
-        let [partinerInt, partinerFract] = String(amountPartner.toFixed(2)).split('.');
+    function createSparklingCard(sparkling) {
+        let {id, name, amount, discount, photoURL, backgroundURL} = sparkling;
 
         let container = document.createElement('div');
-        container.classList.add('product_card', 'mt-2', 'col');
         container.innerHTML = `
-            <div class="">
-                <div class="card_sparkling">
-                    <div class="card_sparkling_bg position-relative" style="background-image: url(assets/img/backgrounds/pizza.jpg)">
-                        <img class="card_sparkling_photo d-sm-none" src="assets/img/backgrounds/espumante.png" alt="Espumante">
-                    </div>
-                    
-                    <div class="card_sparkling_info position-relative">
-                        <img class="card_sparkling_photo d-none d-sm-inline" src="assets/img/backgrounds/espumante.png" alt="Espumante">
+            <div class="card_sparkling">
+                <div class="card_sparkling_bg position-relative" style="background-image: url(${backgroundURL})">
+                    <img class="card_sparkling_photo d-sm-none" src="${photoURL}" alt="Espumante">
+                </div>
+                
+                <div class="card_sparkling_info position-relative">
+                    <img class="card_sparkling_photo d-none d-sm-inline" src="${photoURL}" alt="Espumante">
 
-                        <div class="sparkling_info">
-                            <h2 class="mb-4">Harmonizações Wine</h2>
+                    <div class="sparkling_info">
+                        <h2 class="mb-4">Harmonizações Wine</h2>
 
-                            <h3 class="sparkling_info_title pt-3 mb-4">
-                                Espumante Toro Loco D.O. Cava Brut
-                            </h3>
+                        <h3 class="sparkling_info_title pt-3 mb-4">
+                            ${name}
+                        </h3>
 
-                            <div class="sparkling_info_amount d-flex flex-column pt-1 mb-4">
-                                <s>R$ 330,00</s>
-                                <strong>R$ 280,00</strong>
-                            </div>
+                        <div class="sparkling_info_amount d-flex flex-column pt-1 mb-4">
+                            <s>${utils.formatAmount(amount)}</s>
+                            <strong>${utils.formatAmount(discount)}</strong>
+                        </div>
 
-                            <div>
-                                <button class="sparkling_info_bt btn" type="button">
-                                    Eu quero
-                                </button>
-                            </div>
+                        <div>
+                            <button class="sparkling_info_bt btn" data-id="${id}" type="button">
+                                Eu quero
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -129,8 +131,8 @@ const index = function() {
     }
     
 
-    function createWineCard(product) {
-        let {id, name, year, photoURL, amount, amountPartner, amountNoPartner, nationality: {country, flagURL}, attributes} = product;
+    function createWineCard(wine) {
+        let {id, name, year, photoURL, amount, amountPartner, amountNoPartner, nationality: {country, flagURL}, attributes} = wine;
         let [partinerInt, partinerFract] = String(amountPartner.toFixed(2)).split('.');
 
         let container = document.createElement('div');

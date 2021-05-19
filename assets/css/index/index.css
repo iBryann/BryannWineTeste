@@ -205,7 +205,6 @@
 /* Slick Slider */
 .container_sparkling {
     position: relative;
-    /* border: 2px solid red; */
 }
 #slider_sparkling > .slick-dots {
     bottom: 11%;
@@ -265,7 +264,7 @@
         height: auto;
         left: 0%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(1.15);
     }
 }
 @media (min-width: 768px) {
