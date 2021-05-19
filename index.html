@@ -115,20 +115,12 @@
             .card_sparkling_photo {
                 z-index: 1;
                 position: absolute;
-                left: 0%;
-                top: 50%;
-                transform: translate(-50%, -50%);
             }
 
             .card_sparkling {
                 position: relative;
                 display: flex;
-                height: 500px;
                 margin: 6rem 0;
-            }
-            .card_sparkling_bg, .card_sparkling_info {
-                height: 100%;
-                width: 50%;
             }
             .card_sparkling_bg {
                 background-size: cover;
@@ -138,13 +130,10 @@
             .card_sparkling_info {
                 display: flex;
                 align-items: center;
-                min-width: 500px;
                 background: #EEEEEE;
-                padding: 0 8rem;
             }
 
             .sparkling_info {
-                width: 80%;
                 color: #333333;
                 font-weight: 500;
                 line-height: 34px;
@@ -225,10 +214,8 @@
                     padding: 0 8rem;
                 }
                 .sparkling_info {
-                    width: 80%;
                     text-align: left;
                 }
-
                 .card_sparkling_photo {
                     height: auto;
                     left: 0%;
@@ -236,9 +223,11 @@
                     transform: translate(-50%, -50%);
                 }
             }
-            @media (min-width: 768px) {}
-            @media (min-width: 992px) {}
-            @media (min-width: 1200px) {}
+            @media (min-width: 768px) {
+                .sparkling_info {
+                    width: 80%;
+                }
+            }
         </style>
 
 
