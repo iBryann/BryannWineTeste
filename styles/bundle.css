@@ -6,11 +6,11 @@
 
 @font-face {
     font-family: 'Neo Sans W1G';
-    src: url(../font/neo-sans-w1g-500.otf);
+    src: url(../assets/font/neo-sans-w1g-500.otf);
     font-weight: 500;
 }
 @font-face {
     font-family: 'Neo Sans W1G';
-    src: url(../font/neo-sans-w1g-800.otf);
+    src: url(../assets/font/neo-sans-w1g-800.otf);
     font-weight: 800;
 }
