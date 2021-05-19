@@ -186,6 +186,8 @@
     line-height: 63px;
 }
 .sparkling_info_bt {
+    z-index: 999;
+    position: relative;
     width: 220px;
     font-size: 14px;
     line-height: 16px;

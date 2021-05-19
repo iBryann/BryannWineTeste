@@ -79,6 +79,7 @@ const espumantes = [
 		"discount": 80,
 		"photoURL": "https://www.wine.com.br/cdn-cgi/image/f=auto,h=515,q=99/assets-images/produtos/15861-01.png",
         "backgroundURL": "assets/img/backgrounds/pizza.jpg",
+        "pageURL": "https://www.wine.com.br/vinhos/espumante-cava-maset-del-lleo-brut/prod15861.html"
 	},
 	{
 		"id": 4187,
@@ -87,6 +88,7 @@ const espumantes = [
 		"discount": 5499.90,
 		"photoURL": "https://www.wine.com.br/cdn-cgi/image/f=auto,h=515,q=99/assets-images/produtos/4187-01.png",
         "backgroundURL": "assets/img/backgrounds/bistro.jpg",
+        "pageURL": "https://www.wine.com.br/vinhos/champagne-krug-rose-extra-brut-/prod4187.html"
 	},
 	{
 		"id": 4199,
@@ -95,5 +97,6 @@ const espumantes = [
 		"discount": 939.90,
 		"photoURL": "https://www.wine.com.br/cdn-cgi/image/f=auto,h=515,q=99/assets-images/produtos/4199-01.png",
         "backgroundURL": "assets/img/backgrounds/catchurinho.jpg",
+        "pageURL": "https://www.wine.com.br/vinhos/champagne-veuve-clicquot-demi-sec/prod4199.html"
 	}
 ]

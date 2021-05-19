@@ -93,11 +93,11 @@ const index = function() {
 
 
     function createSparklingCard(sparkling) {
-        let {id, name, amount, discount, photoURL, backgroundURL} = sparkling;
+        let {id, name, amount, discount, photoURL, backgroundURL, pageURL} = sparkling;
 
         let container = document.createElement('div');
         container.innerHTML = `
-            <div class="card_sparkling">
+            <div class="card_sparkling" data-id="${id}">
                 <div class="card_sparkling_bg position-relative" style="background-image: url(${backgroundURL})">
                     <img class="card_sparkling_photo d-sm-none" src="${photoURL}" alt="Espumante">
                 </div>
@@ -118,9 +118,9 @@ const index = function() {
                         </div>
 
                         <div>
-                            <button class="sparkling_info_bt btn" data-id="${id}" type="button">
+                            <a class="sparkling_info_bt btn" href="${pageURL}" target="_blank">
                                 Eu quero
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
