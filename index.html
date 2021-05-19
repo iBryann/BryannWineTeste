@@ -112,18 +112,19 @@
 
 
         <style>
+            .card_sparkling_photo {
+                z-index: 1;
+                position: absolute;
+                left: 0%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
             .card_sparkling {
                 position: relative;
                 display: flex;
                 height: 500px;
                 margin: 6rem 0;
-            }
-            .card_sparkling_photo {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-
             }
             .card_sparkling_bg, .card_sparkling_info {
                 height: 100%;
@@ -137,9 +138,11 @@
             .card_sparkling_info {
                 display: flex;
                 align-items: center;
+                min-width: 500px;
                 background: #EEEEEE;
                 padding: 0 8rem;
             }
+
             .sparkling_info {
                 width: 80%;
                 color: #333333;
@@ -175,16 +178,79 @@
                 border-radius: 4px;
                 padding: .7rem;
             }
+            .sparkling_info_bt:hover {
+                color: #FFFFFF;
+                filter: brightness(1.1);
+            }
+
+
+            @media (min-width: 0px) {
+                .card_sparkling {
+                    flex-direction: column;
+                    height: auto;
+                }
+                .card_sparkling_bg {
+                    height: 320px;
+                    width: 100%;
+                }
+                .card_sparkling_info {
+                    height: auto;
+                    width: 100%;
+                    min-width: auto;
+                    padding: 4rem 2rem 5rem;
+                }
+                .sparkling_info {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .card_sparkling_photo {
+                    height: 380px;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            @media (min-width: 576px) {
+                .card_sparkling {
+                    flex-direction: row;
+                    height: 500px;
+                }
+                .card_sparkling_bg, .card_sparkling_info {
+                    height: 100%;
+                    width: 50%;
+                }
+                .card_sparkling_info {
+                    min-width: 500px;
+                    padding: 0 8rem;
+                }
+                .sparkling_info {
+                    width: 80%;
+                    text-align: left;
+                }
+
+                .card_sparkling_photo {
+                    height: auto;
+                    left: 0%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            @media (min-width: 768px) {}
+            @media (min-width: 992px) {}
+            @media (min-width: 1200px) {}
         </style>
 
 
         <div class="card_sparkling">
-            <img class="card_sparkling_photo" src="assets/img/backgrounds/espumante.png" alt="Espumante">
+            <div class="card_sparkling_bg position-relative" style="background-image: url(assets/img/backgrounds/pizza.jpg)">
+                <img class="card_sparkling_photo d-sm-none" src="assets/img/backgrounds/espumante.png" alt="Espumante">
+            </div>
             
-            <div class="card_sparkling_bg" style="background: url(assets/img/backgrounds/pizza.jpg)"></div>
-            
-            <div class="card_sparkling_info">
-                <div class="sparkling_info border">
+            <div class="card_sparkling_info position-relative">
+                <img class="card_sparkling_photo d-none d-sm-inline" src="assets/img/backgrounds/espumante.png" alt="Espumante">
+
+                <div class="sparkling_info">
                     <h2 class="mb-4">Harmonizações Wine</h2>
 
                     <h3 class="sparkling_info_title pt-3 mb-4">
@@ -204,6 +270,11 @@
                 </div>
             </div>
         </div>
+
+
+
+
+        
 
 
         <div id="section_podcasts" class="container mb-5">
